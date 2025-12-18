@@ -1,15 +1,16 @@
 # AutoClip - Automotive News Video Platform
 
-A modern, responsive video platform for automotive news delivered in quick 3-second clips. Built with vanilla HTML, CSS, and JavaScript, inspired by modern portfolio designs.
+A modern, responsive video platform for automotive news delivered in quick 3-second clips. Built with vanilla HTML, CSS, and JavaScript, with a dynamic single-page architecture perfect for GitHub Pages.
 
 ## 🚗 Features
 
 - **3-Second Video Clips**: Quick, engaging automotive news content
+- **Dynamic Video Pages**: Single video.html page handles all videos using URL parameters
 - **Category Filtering**: Electric, Racing, Luxury, Tech, Classic, and Industry news
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
-- **Video Modal**: Full-screen video player with details
+- **Comments System**: Local storage-based comment functionality
 - **Modern UI**: Clean, professional design with smooth animations
-- **GitHub Pages Ready**: Deployable to GitHub Pages instantly
+- **GitHub Pages Ready**: Fully deployable to GitHub Pages with no backend required
 
 ## 🎨 Design
 
@@ -23,10 +24,13 @@ The design is inspired by modern portfolio websites with:
 ## 📁 Project Structure
 
 ```
-vsp/
-├── index.html          # Main HTML file
+autoclip/
+├── index.html          # Home page with video grid
+├── video.html          # Dynamic video player page (single page for all videos)
 ├── styles.css          # All styling
-├── script.js           # JavaScript functionality
+├── script.js           # Home page functionality
+├── video.js            # Dynamic video page logic
+├── comments.js         # Comments functionality
 └── README.md           # This file
 ```
 
@@ -61,6 +65,8 @@ To add real videos, edit the `videosData` array in `script.js`:
     duration: "3s"
 }
 ```
+
+Videos are accessed via URL parameters: `video.html?id=1`
 
 ### Hosting Videos on GitHub
 

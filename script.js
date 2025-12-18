@@ -158,7 +158,7 @@ function renderVideos(filter = 'all') {
 // Create video card element
 function createVideoCard(video) {
     const card = document.createElement('a');
-    card.href = `video-${video.id}.html`;
+    card.href = `video.html?id=${video.id}`;
     card.className = 'video-card';
     card.setAttribute('data-category', video.category);
     card.style.textDecoration = 'none';
