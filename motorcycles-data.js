@@ -14,7 +14,7 @@ const motorcyclesData = {
         price: '$28,500',
         description: 'The ultimate superbike from Honda, featuring MotoGP-derived technology and race-winning performance.',
         features: ['Ride-by-Wire Throttle', 'Cornering ABS', 'Quick Shifter', 'Öhlins Electronic Suspension'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=CBR1000RR-R'
+        image: 'images/motorcycles/cbr1000rr-r-fireblade.jpg'
     },
     'africa-twin': {
         brand: 'Honda',
@@ -29,7 +29,7 @@ const motorcyclesData = {
         price: '$14,500',
         description: 'Legendary adventure bike designed for both on-road and off-road excellence.',
         features: ['DCT Transmission', 'Cruise Control', 'Apple CarPlay', 'LED Lighting'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Africa+Twin'
+        image: 'images/motorcycles/africa-twin.jpg'
     },
     'gold-wing': {
         brand: 'Honda',
@@ -44,7 +44,7 @@ const motorcyclesData = {
         price: '$23,800',
         description: 'The ultimate luxury touring motorcycle with unmatched comfort and technology.',
         features: ['7-Speed DCT', 'Navigation System', 'Heated Seats', 'Apple CarPlay'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Gold+Wing'
+        image: 'images/motorcycles/gold-wing.jpg'
     },
     'cb650r': {
         brand: 'Honda',
@@ -59,7 +59,7 @@ const motorcyclesData = {
         price: '$8,700',
         description: 'Neo Sports Café styling meets inline-four performance in this modern naked bike.',
         features: ['Slipper Clutch', 'LCD Display', 'LED Lights', 'ABS'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=CB650R'
+        image: 'images/motorcycles/cb650r.jpg'
     },
 
     // Yamaha
@@ -76,7 +76,7 @@ const motorcyclesData = {
         price: '$17,399',
         description: 'MotoGP technology in a street-legal superbike with crossplane crankshaft.',
         features: ['IMU Electronics', 'Quick Shifter', 'Launch Control', 'Slide Control'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=YZF-R1'
+        image: 'images/motorcycles/yzf-r1.jpg'
     },
     'mt-09': {
         brand: 'Yamaha',
@@ -91,7 +91,7 @@ const motorcyclesData = {
         price: '$9,399',
         description: 'The ultimate hyper-naked with triple-cylinder excitement and cutting-edge electronics.',
         features: ['6-Axis IMU', 'Ride Modes', 'TFT Display', 'Quick Shifter'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=MT-09'
+        image: 'images/motorcycles/mt-09.jpg'
     },
     'tenere-700': {
         brand: 'Yamaha',
@@ -106,7 +106,7 @@ const motorcyclesData = {
         price: '$10,299',
         description: 'Lightweight adventure bike built for serious off-road capability.',
         features: ['Rally-Inspired', 'ABS', 'Long Travel Suspension', 'Off-Road Ready'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Tenere+700'
+        image: 'images/motorcycles/tenere-700.jpg'
     },
     'niken': {
         brand: 'Yamaha',
@@ -121,7 +121,7 @@ const motorcyclesData = {
         price: '$17,099',
         description: 'Revolutionary three-wheel design offering unmatched cornering confidence.',
         features: ['LMW Technology', 'TFT Display', 'Cruise Control', 'Traction Control'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=NIKEN'
+        image: 'images/motorcycles/niken.jpg'
     },
 
     // Ducati
@@ -138,7 +138,7 @@ const motorcyclesData = {
         price: '$24,995',
         description: 'Italian superbike excellence with MotoGP-derived V4 engine and stunning design.',
         features: ['Cornering ABS', 'DTC EVO', 'DWC EVO', 'Öhlins Suspension'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Panigale+V4'
+        image: 'images/motorcycles/panigale-v4.jpg'
     },
     'monster': {
         brand: 'Ducati',
@@ -153,7 +153,7 @@ const motorcyclesData = {
         price: '$11,895',
         description: 'Iconic naked bike with Italian styling and Testastretta engine.',
         features: ['Ride Modes', 'TFT Display', 'LED Lights', 'Quick Shifter'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Monster'
+        image: 'images/motorcycles/monster.jpg'
     },
     'multistrada-v4': {
         brand: 'Ducati',
@@ -168,7 +168,7 @@ const motorcyclesData = {
         price: '$23,295',
         description: 'Sport-touring adventure bike with V4 Granturismo engine and advanced electronics.',
         features: ['Radar Technology', 'Adaptive Cruise', 'Semi-Active Suspension', 'V4 Engine'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Multistrada+V4'
+        image: 'images/motorcycles/multistrada-v4.jpg'
     },
     'scrambler': {
         brand: 'Ducati',
@@ -183,7 +183,7 @@ const motorcyclesData = {
         price: '$9,395',
         description: 'Retro-styled bike with modern technology and Italian charm.',
         features: ['Ride by Wire', 'ABS', 'LED Lights', 'LCD Display'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Scrambler'
+        image: 'images/motorcycles/scrambler.jpg'
     },
 
     // BMW
@@ -200,7 +200,7 @@ const motorcyclesData = {
         price: '$17,895',
         description: 'German precision engineering meets superbike performance.',
         features: ['ShiftCam Technology', 'Dynamic Traction Control', 'ABS Pro', 'Launch Control'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=S1000RR'
+        image: 'images/motorcycles/s1000rr.jpg'
     },
     'r1250gs': {
         brand: 'BMW',
@@ -215,7 +215,7 @@ const motorcyclesData = {
         price: '$18,995',
         description: 'The world\'s most popular adventure bike with boxer engine.',
         features: ['ShiftCam', 'Dynamic ESA', 'Connectivity', 'TFT Display'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=R1250GS'
+        image: 'images/motorcycles/r1250gs.jpg'
     },
     'm1000rr': {
         brand: 'BMW',
@@ -230,7 +230,7 @@ const motorcyclesData = {
         price: '$33,995',
         description: 'BMW\'s first M-branded motorcycle with race-ready technology.',
         features: ['M Carbon Wheels', 'M GPS Lap Trigger', 'M Winglets', 'M ABS'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=M1000RR'
+        image: 'images/motorcycles/m1000rr.jpg'
     },
     'f900r': {
         brand: 'BMW',
@@ -245,7 +245,7 @@ const motorcyclesData = {
         price: '$9,495',
         description: 'Dynamic roadster with sporty character and everyday usability.',
         features: ['Ride Modes', 'ABS Pro', 'TFT Display', 'LED Lights'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=F900R'
+        image: 'images/motorcycles/f900r.jpg'
     },
 
     // Kawasaki
@@ -262,7 +262,7 @@ const motorcyclesData = {
         price: '$29,500',
         description: 'Supercharged hyperbike pushing the boundaries of performance.',
         features: ['Supercharged Engine', 'Carbon Fiber', 'Launch Control', 'Quick Shifter'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Ninja+H2'
+        image: 'images/motorcycles/ninja-h2.jpg'
     },
     'z900': {
         brand: 'Kawasaki',
@@ -277,7 +277,7 @@ const motorcyclesData = {
         price: '$8,999',
         description: 'Aggressive naked bike with inline-four punch and sharp handling.',
         features: ['Sugomi Design', 'TFT Display', 'Traction Control', 'ABS'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Z900'
+        image: 'images/motorcycles/z900.jpg'
     },
     'versys-1000': {
         brand: 'Kawasaki',
@@ -292,7 +292,7 @@ const motorcyclesData = {
         price: '$13,099',
         description: 'Sport-adventure bike with inline-four power and touring comfort.',
         features: ['KQS Quick Shifter', 'KIBS ABS', 'Cruise Control', 'TFT Display'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Versys+1000'
+        image: 'images/motorcycles/versys-1000.jpg'
     },
     'zx-10r': {
         brand: 'Kawasaki',
@@ -307,7 +307,7 @@ const motorcyclesData = {
         price: '$16,599',
         description: 'World Superbike-winning technology in a production superbike.',
         features: ['Kawasaki Cornering Management', 'Launch Control', 'TFT Display', 'Quick Shifter'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=ZX-10R'
+        image: 'images/motorcycles/zx-10r.jpg'
     },
 
     // Suzuki
@@ -324,7 +324,7 @@ const motorcyclesData = {
         price: '$18,599',
         description: 'Legendary speed icon with third-generation refinement and technology.',
         features: ['Ride Modes', 'Launch Control', 'TFT Display', 'Cruise Control'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Hayabusa'
+        image: 'images/motorcycles/hayabusa.jpg'
     },
     'gsx-r1000': {
         brand: 'Suzuki',
@@ -339,7 +339,7 @@ const motorcyclesData = {
         price: '$14,799',
         description: 'Race-proven superbike with MotoGP technology and aggressive performance.',
         features: ['Bi-Directional Quick Shifter', 'Launch Control', 'Cornering ABS', 'Motion Track'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=GSX-R1000'
+        image: 'images/motorcycles/gsx-r1000.jpg'
     },
     'v-strom-1050': {
         brand: 'Suzuki',
@@ -354,7 +354,7 @@ const motorcyclesData = {
         price: '$14,299',
         description: 'Versatile adventure bike with V-twin character and touring comfort.',
         features: ['Cruise Control', 'Traction Control', 'TFT Display', 'LED Lights'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=V-Strom+1050'
+        image: 'images/motorcycles/v-strom-1050.jpg'
     },
     'katana': {
         brand: 'Suzuki',
@@ -369,7 +369,7 @@ const motorcyclesData = {
         price: '$13,199',
         description: 'Legendary name returns with modern performance and iconic styling.',
         features: ['Traction Control', 'LCD Display', 'LED Lights', 'ABS'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Katana'
+        image: 'images/motorcycles/katana.jpg'
     },
 
     // KTM
@@ -386,7 +386,7 @@ const motorcyclesData = {
         price: '$19,499',
         description: 'The Beast - raw power and aggressive styling define this Austrian supernaked.',
         features: ['TFT Display', 'Cornering ABS', 'Traction Control', 'Quick Shifter'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=1290+Super+Duke+R'
+        image: 'images/motorcycles/1290-super-duke-r.jpg'
     },
     '890-duke': {
         brand: 'KTM',
@@ -401,7 +401,7 @@ const motorcyclesData = {
         price: '$11,999',
         description: 'Sharp-edged streetfighter with razor-precise handling.',
         features: ['Ride Modes', 'TFT Display', 'Quick Shifter', 'LED Lights'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=890+Duke'
+        image: 'images/motorcycles/890-duke.jpg'
     },
     '1290-super-adventure': {
         brand: 'KTM',
@@ -416,7 +416,7 @@ const motorcyclesData = {
         price: '$19,799',
         description: 'Travel the world with sport bike performance in adventure bike clothing.',
         features: ['Adaptive Cruise Control', 'Cornering ABS', 'Semi-Active Suspension', 'Connectivity'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=1290+Super+Adventure'
+        image: 'images/motorcycles/1290-super-adventure.jpg'
     },
     'rc-390': {
         brand: 'KTM',
@@ -431,7 +431,7 @@ const motorcyclesData = {
         price: '$5,799',
         description: 'Entry-level sport bike with race-ready attitude and sharp handling.',
         features: ['Ride by Wire', 'TFT Display', 'Superbike Riding Position', 'ABS'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=RC+390'
+        image: 'images/motorcycles/rc-390.jpg'
     },
 
     // Harley-Davidson
@@ -448,7 +448,7 @@ const motorcyclesData = {
         price: '$17,319',
         description: 'Harley\'s first adventure bike brings American muscle to the dirt.',
         features: ['Adaptive Ride Height', 'Cornering ABS', 'Traction Control', 'TFT Display'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Pan+America+1250'
+        image: 'images/motorcycles/pan-america-1250.jpg'
     },
     'sportster-s': {
         brand: 'Harley-Davidson',
@@ -463,7 +463,7 @@ const motorcyclesData = {
         price: '$15,999',
         description: 'Modern muscle cruiser with Revolution Max engine and premium components.',
         features: ['TFT Display', 'LED Lighting', 'Adjustable Suspension', 'Cornering ABS'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Sportster+S'
+        image: 'images/motorcycles/sportster-s.jpg'
     },
     'road-glide': {
         brand: 'Harley-Davidson',
@@ -478,7 +478,7 @@ const motorcyclesData = {
         price: '$23,999',
         description: 'Iconic bagger with frame-mounted fairing for stable highway cruising.',
         features: ['BOOM! Audio', 'Navigation', 'Cruise Control', 'LED Lights'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Road+Glide'
+        image: 'images/motorcycles/road-glide.jpg'
     },
     'fat-boy': {
         brand: 'Harley-Davidson',
@@ -493,7 +493,7 @@ const motorcyclesData = {
         price: '$20,999',
         description: 'Muscular cruiser with solid disc wheels and unmistakable presence.',
         features: ['Milwaukee-Eight Engine', 'LED Lighting', 'ABS', 'Electronic Cruise Control'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Fat+Boy'
+        image: 'images/motorcycles/fat-boy.jpg'
     },
 
     // Triumph
@@ -510,7 +510,7 @@ const motorcyclesData = {
         price: '$18,500',
         description: 'British triple-cylinder brutality with iconic styling and modern tech.',
         features: ['Öhlins Suspension', 'Brembo Brakes', 'TFT Display', 'Quick Shifter'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Speed+Triple'
+        image: 'images/motorcycles/speed-triple.jpg'
     },
     'tiger-1200': {
         brand: 'Triumph',
@@ -525,7 +525,7 @@ const motorcyclesData = {
         price: '$18,995',
         description: 'Versatile adventure tourer with triple power and go-anywhere capability.',
         features: ['Adaptive Cruise', 'Semi-Active Suspension', 'Cornering ABS', 'TFT Display'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Tiger+1200'
+        image: 'images/motorcycles/tiger-1200.jpg'
     },
     'bonneville': {
         brand: 'Triumph',
@@ -540,7 +540,7 @@ const motorcyclesData = {
         price: '$10,995',
         description: 'Timeless British classic with modern reliability and authentic character.',
         features: ['Ride by Wire', 'ABS', 'Traction Control', 'LED Lights'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Bonneville'
+        image: 'images/motorcycles/bonneville.jpg'
     },
     'rocket-3': {
         brand: 'Triumph',
@@ -555,7 +555,7 @@ const motorcyclesData = {
         price: '$23,500',
         description: 'World\'s largest production motorcycle engine with brutal torque.',
         features: ['TFT Display', 'Ride Modes', 'Traction Control', 'Cruise Control'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Rocket+3'
+        image: 'images/motorcycles/rocket-3.jpg'
     },
 
     // Royal Enfield
@@ -572,7 +572,7 @@ const motorcyclesData = {
         price: '$5,149',
         description: 'Affordable adventure bike built for the mountains and beyond.',
         features: ['Long Travel Suspension', 'Tripper Navigation', 'ABS', 'Windscreen'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Himalayan'
+        image: 'images/motorcycles/himalayan.jpg'
     },
     'continental-gt': {
         brand: 'Royal Enfield',
@@ -587,7 +587,7 @@ const motorcyclesData = {
         price: '$6,299',
         description: 'Modern cafe racer with classic British styling and twin-cylinder power.',
         features: ['Slipper Clutch', 'ABS', 'USD Forks', 'Clip-On Handlebars'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Continental+GT'
+        image: 'images/motorcycles/continental-gt.jpg'
     },
     'meteor-350': {
         brand: 'Royal Enfield',
@@ -602,7 +602,7 @@ const motorcyclesData = {
         price: '$4,399',
         description: 'Easy-going cruiser with retro charm and modern reliability.',
         features: ['Tripper Navigation', 'LED Lights', 'Low Seat Height', 'Bluetooth'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Meteor+350'
+        image: 'images/motorcycles/meteor-350.jpg'
     },
     'hunter-350': {
         brand: 'Royal Enfield',
@@ -617,7 +617,7 @@ const motorcyclesData = {
         price: '$4,299',
         description: 'Urban roadster with nimble handling and accessible performance.',
         features: ['Lightweight', 'Low Seat Height', 'LED Lights', 'Digital Console'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Hunter+350'
+        image: 'images/motorcycles/hunter-350.jpg'
     },
 
     // Aprilia
@@ -634,7 +634,7 @@ const motorcyclesData = {
         price: '$19,999',
         description: 'Race-bred Italian superbike with V4 power and advanced electronics.',
         features: ['APRC Suite', 'Semi-Active Suspension', 'Quick Shifter', 'TFT Display'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=RSV4'
+        image: 'images/motorcycles/rsv4.jpg'
     },
     'tuono-v4': {
         brand: 'Aprilia',
@@ -649,7 +649,7 @@ const motorcyclesData = {
         price: '$16,999',
         description: 'Naked version of the RSV4 with street-friendly attitude.',
         features: ['APRC Electronics', 'Öhlins Suspension', 'Brembo Brakes', 'Cruise Control'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Tuono+V4'
+        image: 'images/motorcycles/tuono-v4.jpg'
     },
     'rs-660': {
         brand: 'Aprilia',
@@ -664,7 +664,7 @@ const motorcyclesData = {
         price: '$11,299',
         description: 'Middleweight sportbike with lightweight chassis and modern electronics.',
         features: ['Ride Modes', 'TFT Display', 'Quick Shifter', 'Cornering ABS'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=RS+660'
+        image: 'images/motorcycles/rs-660.jpg'
     },
     'tuareg-660': {
         brand: 'Aprilia',
@@ -679,7 +679,7 @@ const motorcyclesData = {
         price: '$12,499',
         description: 'Italian adventure bike with sporting character and off-road prowess.',
         features: ['Ride Modes', 'TFT Display', 'Long Travel Suspension', 'Skid Plate'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Tuareg+660'
+        image: 'images/motorcycles/tuareg-660.jpg'
     },
 
     // MV Agusta
@@ -696,7 +696,7 @@ const motorcyclesData = {
         price: '$28,998',
         description: 'Exotic Italian superbike - art in motion with breathtaking performance.',
         features: ['Öhlins Suspension', 'Brembo Brakes', 'TFT Display', 'Quick Shifter'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=F4'
+        image: 'images/motorcycles/f4.jpg'
     },
     'brutale-1000': {
         brand: 'MV Agusta',
@@ -711,7 +711,7 @@ const motorcyclesData = {
         price: '$29,998',
         description: 'The most powerful production naked bike with Italian styling.',
         features: ['Launch Control', 'Quick Shifter', 'TFT Display', 'Öhlins Smart EC 2.0'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Brutale+1000'
+        image: 'images/motorcycles/brutale-1000.jpg'
     },
     'superveloce': {
         brand: 'MV Agusta',
@@ -726,7 +726,7 @@ const motorcyclesData = {
         price: '$28,498',
         description: 'Retro-futuristic design meets modern performance in this Italian masterpiece.',
         features: ['Carbon Fiber', 'TFT Display', 'Quick Shifter', 'Launch Control'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Superveloce'
+        image: 'images/motorcycles/superveloce.jpg'
     },
     'dragster': {
         brand: 'MV Agusta',
@@ -741,6 +741,15 @@ const motorcyclesData = {
         price: '$18,998',
         description: 'Aggressive naked with unique styling and triple-cylinder character.',
         features: ['Ride Modes', 'TFT Display', 'Quick Shifter', 'LED Lights'],
-        image: 'https://via.placeholder.com/800x450/000/fff?text=Dragster'
+        image: 'images/motorcycles/dragster.jpg'
     }
 };
+
+
+
+
+
+
+
+
+
