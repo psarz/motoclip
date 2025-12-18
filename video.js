@@ -26,7 +26,7 @@ function formatCategoryDisplay(category) {
     const categories = {
         'electric': 'Electric',
         'racing': 'Racing',
-        'luxury': 'Luxury',
+        'luxury': 'Superbikes',
         'tech': 'Technology',
         'classic': 'Classic',
         'industry': 'Industry'
@@ -82,7 +82,7 @@ function renderVideoPage() {
     }
     
     // Update page title
-    document.getElementById('pageTitle').textContent = `${video.title} - AutoClip`;
+    document.getElementById('pageTitle').textContent = `${video.title} - MotoClip`;
     
     // Get related videos
     const relatedVideos = getRelatedVideos(video);
