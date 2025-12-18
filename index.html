@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoClip - Automotive News in 3 Seconds</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-car"></i>
+                <span>AutoClip</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#trending" class="nav-link">Trending</a></li>
+                <li><a href="#categories" class="nav-link">Categories</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Automotive News in <span class="highlight">3 Seconds</span></h1>
+                <p class="hero-subtitle">Stay updated with the latest automotive industry news through quick, engaging video clips</p>
+                <button class="btn-primary" onclick="scrollToVideos()">
+                    <i class="fas fa-play"></i> Watch Now
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Video Clips</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3s</h3>
+                    <p>Per Clip</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Daily</h3>
+                    <p>Updates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Categories</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="electric">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Electric Vehicles</h3>
+                    <p>Latest EV innovations</p>
+                </div>
+                <div class="category-card" data-category="racing">
+                    <i class="fas fa-flag-checkered"></i>
+                    <h3>Racing & Sports</h3>
+                    <p>F1, NASCAR & more</p>
+                </div>
+                <div class="category-card" data-category="luxury">
+                    <i class="fas fa-gem"></i>
+                    <h3>Luxury Cars</h3>
+                    <p>Premium automotive</p>
+                </div>
+                <div class="category-card" data-category="tech">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Tech & Innovation</h3>
+                    <p>Autonomous & AI</p>
+                </div>
+                <div class="category-card" data-category="classic">
+                    <i class="fas fa-clock"></i>
+                    <h3>Classic Cars</h3>
+                    <p>Vintage & restored</p>
+                </div>
+                <div class="category-card" data-category="industry">
+                    <i class="fas fa-industry"></i>
+                    <h3>Industry News</h3>
+                    <p>Market & business</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Grid Section -->
+    <section id="trending" class="video-section">
+        <div class="container">
+            <h2 class="section-title">Trending Clips</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="electric">Electric</button>
+                <button class="filter-btn" data-filter="racing">Racing</button>
+                <button class="filter-btn" data-filter="luxury">Luxury</button>
+                <button class="filter-btn" data-filter="tech">Tech</button>
+            </div>
+            <div class="video-grid" id="videoGrid">
+                <!-- Videos will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-video-container">
+                <video id="modalVideo" class="modal-video" controls autoplay loop>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <div class="modal-meta">
+                    <span id="modalCategory" class="category-badge"></span>
+                    <span id="modalDate"></span>
+                </div>
+                <div class="modal-actions">
+                    <button class="action-btn"><i class="fas fa-thumbs-up"></i> Like</button>
+                    <button class="action-btn"><i class="fas fa-share"></i> Share</button>
+                    <button class="action-btn"><i class="fas fa-bookmark"></i> Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About AutoClip</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>AutoClip delivers the latest automotive news in bite-sized 3-second video clips. Stay informed about electric vehicles, racing, luxury cars, and industry innovations without spending hours reading articles.</p>
+                    <p>Our platform curates the most important automotive stories and presents them in a quick, engaging format perfect for the modern audience.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>3-Second Clips</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-sync"></i>
+                            <span>Daily Updates</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Friendly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-car"></i> AutoClip</h3>
+                    <p>Automotive news in 3 seconds</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#trending">Trending</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AutoClip. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

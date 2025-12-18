@@ -1,0 +1,2 @@
+# Ignore PEM certificate files
+*.pem
