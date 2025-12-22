@@ -1,0 +1,91 @@
+site_name: MCP News Generator Documentation
+site_description: MCP server for generating motorcycle news videos and updating news tiles
+site_author: Your Name
+site_url: https://github.com/yourusername/mcp-news-generator
+
+repo_name: mcp-news-generator
+repo_url: https://github.com/yourusername/mcp-news-generator
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            merge_init_into_class: true
+            members_order: source
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quickstart.md
+      - Configuration: getting-started/configuration.md
+  - User Guide:
+      - Tools Overview: guide/tools.md
+      - Fetching News: guide/fetching-news.md
+      - Generating Videos: guide/generating-videos.md
+      - Updating Tiles: guide/updating-tiles.md
+      - Workflows: guide/workflows.md
+  - API Reference:
+      - Server: api/server.md
+  - Development:
+      - Contributing: development/contributing.md
+      - Testing: development/testing.md
+      - Troubleshooting: development/troubleshooting.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/mcp-news-generator

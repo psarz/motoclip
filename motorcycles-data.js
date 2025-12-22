@@ -198,7 +198,7 @@ const motorcyclesData = {
         weight: '197 kg',
         topSpeed: '299 km/h',
         price: '$17,895',
-        description: 'German precision engineering meets superbike performance.',
+        description: '2025 BMW S1000RR M Competition Package Announced!',
         features: ['ShiftCam Technology', 'Dynamic Traction Control', 'ABS Pro', 'Launch Control'],
         image: 'images/motorcycles/s1000rr.jpg'
     },
@@ -213,7 +213,7 @@ const motorcyclesData = {
         weight: '249 kg',
         topSpeed: '210 km/h',
         price: '$18,995',
-        description: 'The world\'s most popular adventure bike with boxer engine.',
+        description: 'BMW R1250GS: Adventure Icon Continues to Evolve's most popular adventure bike with boxer engine.',
         features: ['ShiftCam', 'Dynamic ESA', 'Connectivity', 'TFT Display'],
         image: 'images/motorcycles/r1250gs.jpg'
     },
@@ -228,7 +228,7 @@ const motorcyclesData = {
         weight: '192 kg',
         topSpeed: '306 km/h',
         price: '$33,995',
-        description: 'BMW\'s first M-branded motorcycle with race-ready technology.',
+        description: 'BMW M1000RR: The Ultimate M Power Superbike!'s first M-branded motorcycle with race-ready technology.',
         features: ['M Carbon Wheels', 'M GPS Lap Trigger', 'M Winglets', 'M ABS'],
         image: 'images/motorcycles/m1000rr.jpg'
     },
@@ -243,7 +243,7 @@ const motorcyclesData = {
         weight: '211 kg',
         topSpeed: '220 km/h',
         price: '$9,495',
-        description: 'Dynamic roadster with sporty character and everyday usability.',
+        description: 'BMW F900R: Dynamic Roadster Performance!',
         features: ['Ride Modes', 'ABS Pro', 'TFT Display', 'LED Lights'],
         image: 'images/motorcycles/f900r.jpg'
     },
