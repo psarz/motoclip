@@ -132,7 +132,7 @@ const videosData = [
 const videoGrid = document.getElementById('videoGrid');
 const modal = document.getElementById('videoModal');
 const modalVideo = document.getElementById('modalVideo');
-const closeModal = document.querySelector('.close-modal');
+const closeVideoModal = document.querySelector('.close-modal');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const categoryCards = document.querySelectorAll('.category-card');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -212,7 +212,7 @@ function openModal(video) {
 }
 
 // Close modal
-function closeVideoModal() {
+function closeVideoModalHandler() {
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
     modalVideo.pause();
@@ -222,18 +222,20 @@ function closeVideoModal() {
 // Setup event listeners
 function setupEventListeners() {
     // Close modal
-    closeModal.addEventListener('click', closeVideoModal);
+    if (closeVideoModal) {
+        closeVideoModal.addEventListener('click', closeVideoModalHandler);
+    }
     
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
-            closeVideoModal();
+            closeVideoModalHandler();
         }
     });
     
     // Escape key to close modal
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.style.display === 'block') {
-            closeVideoModal();
+            closeVideoModalHandler();
         }
     });
     

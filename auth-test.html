@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Test - MotoClip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #dc2626;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 MotoClip Authentication Test</h1>
+    <p>Test the authentication endpoints to make sure everything is working correctly.</p>
+
+    <div class="test-card">
+        <h3>1. Test Server Connection</h3>
+        <button onclick="testServer()">Test Connection</button>
+        <div id="serverResult" class="result"></div>
+    </div>
+
+    <div class="test-card">
+        <h3>2. Register Test User</h3>
+        <button onclick="testRegister()">Register User</button>
+        <div id="registerResult" class="result"></div>
+    </div>
+
+    <div class="test-card">
+        <h3>3. Test Login</h3>
+        <button onclick="testLogin()">Login</button>
+        <div id="loginResult" class="result"></div>
+    </div>
+
+    <div class="test-card">
+        <h3>4. Get Current User</h3>
+        <button onclick="getCurrentUser()">Get User</button>
+        <div id="userResult" class="result"></div>
+    </div>
+
+    <div class="test-card">
+        <h3>5. Test Logout</h3>
+        <button onclick="testLogout()">Logout</button>
+        <div id="logoutResult" class="result"></div>
+    </div>
+
+    <div class="test-card">
+        <h3>Navigation</h3>
+        <button onclick="window.location.href='index.html'" style="background: #3b82f6;">Go to Main App</button>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000/api';
+        const testUsername = 'testuser_' + Date.now();
+        const testEmail = testUsername + '@test.com';
+        const testPassword = 'testpass123';
+
+        function showResult(elementId, message, isSuccess) {
+            const el = document.getElementById(elementId);
+            el.textContent = message;
+            el.className = 'result ' + (isSuccess ? 'success' : 'error');
+            el.style.display = 'block';
+        }
+
+        async function testServer() {
+            try {
+                const response = await fetch(`${API_URL}/auth/status`, {
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                showResult('serverResult', '✅ Server is online! Response: ' + JSON.stringify(data), true);
+            } catch (error) {
+                showResult('serverResult', '❌ Server connection failed: ' + error.message, false);
+            }
+        }
+
+        async function testRegister() {
+            try {
+                const response = await fetch(`${API_URL}/register`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify({
+                        username: testUsername,
+                        email: testEmail,
+                        password: testPassword
+                    })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showResult('registerResult', '✅ Registration successful! User: ' + JSON.stringify(data.user), true);
+                } else {
+                    showResult('registerResult', '❌ Registration failed: ' + data.message, false);
+                }
+            } catch (error) {
+                showResult('registerResult', '❌ Error: ' + error.message, false);
+            }
+        }
+
+        async function testLogin() {
+            try {
+                const response = await fetch(`${API_URL}/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    credentials: 'include',
+                    body: JSON.stringify({
+                        username: testUsername,
+                        password: testPassword
+                    })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showResult('loginResult', '✅ Login successful! User: ' + JSON.stringify(data.user), true);
+                } else {
+                    showResult('loginResult', '❌ Login failed: ' + data.message, false);
+                }
+            } catch (error) {
+                showResult('loginResult', '❌ Error: ' + error.message, false);
+            }
+        }
+
+        async function getCurrentUser() {
+            try {
+                const response = await fetch(`${API_URL}/user`, {
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showResult('userResult', '✅ User data: ' + JSON.stringify(data.user), true);
+                } else {
+                    showResult('userResult', '❌ Failed: ' + data.message, false);
+                }
+            } catch (error) {
+                showResult('userResult', '❌ Error: ' + error.message, false);
+            }
+        }
+
+        async function testLogout() {
+            try {
+                const response = await fetch(`${API_URL}/logout`, {
+                    method: 'POST',
+                    credentials: 'include'
+                });
+                const data = await response.json();
+                if (data.success) {
+                    showResult('logoutResult', '✅ Logout successful!', true);
+                } else {
+                    showResult('logoutResult', '❌ Logout failed: ' + data.message, false);
+                }
+            } catch (error) {
+                showResult('logoutResult', '❌ Error: ' + error.message, false);
+            }
+        }
+    </script>
+</body>
+</html>

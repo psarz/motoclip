@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - MotoClip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-motorcycle"></i>
+                <span>MotoClip</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="index.html#trending" class="nav-link">
+                    <i class="fas fa-fire"></i>
+                    <span>Trending</span>
+                </a></li>
+                <li><a href="index.html#brands" class="nav-link">
+                    <i class="fas fa-award"></i>
+                    <span>Brands</span>
+                </a></li>
+            </ul>
+            <div class="nav-auth">
+                <div id="userProfile" class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                    <span id="usernameDisplay"></span>
+                    <button id="logoutBtn" class="btn-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <h1 id="profileUsername">Loading...</h1>
+                    <p id="profileEmail">Loading...</p>
+                    <span class="member-since">Member since <span id="memberSince">-</span></span>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <!-- Profile Details Card -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-user"></i> Profile Details</h2>
+                        <button id="editProfileBtn" class="btn-secondary">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div id="profileDetails">
+                            <div class="detail-row">
+                                <span class="detail-label">Username</span>
+                                <span class="detail-value" id="displayUsername">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Email</span>
+                                <span class="detail-value" id="displayEmail">-</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Account Created</span>
+                                <span class="detail-value" id="displayCreated">-</span>
+                            </div>
+                        </div>
+
+                        <!-- Edit Form (Hidden by default) -->
+                        <div id="editProfileForm" style="display: none;">
+                            <form id="updateProfileForm">
+                                <div class="form-group">
+                                    <label for="editUsername">
+                                        <i class="fas fa-user"></i> Username
+                                    </label>
+                                    <input type="text" id="editUsername" name="username" required minlength="3">
+                                </div>
+                                <div class="form-group">
+                                    <label for="editEmail">
+                                        <i class="fas fa-envelope"></i> Email
+                                    </label>
+                                    <input type="email" id="editEmail" name="email" required>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn-primary">
+                                        <i class="fas fa-save"></i> Save Changes
+                                    </button>
+                                    <button type="button" id="cancelEditBtn" class="btn-secondary">
+                                        <i class="fas fa-times"></i> Cancel
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="updateMessage" class="message"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Change Password Card -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-lock"></i> Change Password</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="changePasswordForm">
+                            <div class="form-group">
+                                <label for="currentPassword">
+                                    <i class="fas fa-key"></i> Current Password
+                                </label>
+                                <input type="password" id="currentPassword" name="currentPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">
+                                    <i class="fas fa-lock"></i> New Password
+                                </label>
+                                <input type="password" id="newPassword" name="newPassword" required minlength="6">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmNewPassword">
+                                    <i class="fas fa-lock"></i> Confirm New Password
+                                </label>
+                                <input type="password" id="confirmNewPassword" name="confirmNewPassword" required>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-shield-alt"></i> Update Password
+                            </button>
+                        </form>
+                        <div id="passwordMessage" class="message"></div>
+                    </div>
+                </div>
+
+                <!-- Account Statistics -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-chart-line"></i> Activity Stats</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <i class="fas fa-video"></i>
+                                <div class="stat-info">
+                                    <h3>0</h3>
+                                    <p>Videos Watched</p>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-heart"></i>
+                                <div class="stat-info">
+                                    <h3>0</h3>
+                                    <p>Favorites</p>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <i class="fas fa-clock"></i>
+                                <div class="stat-info">
+                                    <h3 id="accountAge">0</h3>
+                                    <p>Days Active</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Danger Zone -->
+                <div class="profile-card danger-card">
+                    <div class="card-header">
+                        <h2><i class="fas fa-exclamation-triangle"></i> Danger Zone</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="danger-text">Once you delete your account, there is no going back. Please be certain.</p>
+                        <button id="deleteAccountBtn" class="btn-danger">
+                            <i class="fas fa-trash-alt"></i> Delete Account
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeDeleteModal">&times;</span>
+            <div class="delete-confirm">
+                <i class="fas fa-exclamation-circle"></i>
+                <h2>Delete Account?</h2>
+                <p>This action cannot be undone. All your data will be permanently deleted.</p>
+                <div class="form-actions">
+                    <button id="confirmDeleteBtn" class="btn-danger">
+                        <i class="fas fa-trash-alt"></i> Yes, Delete My Account
+                    </button>
+                    <button id="cancelDeleteBtn" class="btn-secondary">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+                <div id="deleteMessage" class="message"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fas fa-motorcycle"></i>
+                        <span>MotoClip</span>
+                    </div>
+                    <p>Motorcycle news in 3 seconds</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#trending">Trending</a></li>
+                        <li><a href="index.html#brands">Brands</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MotoClip. All rights reserved. | Made In India ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>
