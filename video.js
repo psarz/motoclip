@@ -91,7 +91,10 @@ function renderVideoPage() {
     contentContainer.innerHTML = `
         <div class="video-detail-container">
             <div class="video-player-wrapper">
-                <img src="${video.thumbnail.replace('400x300', '1920x1080')}" alt="${video.title}">
+                <video controls autoplay id="mainVideo">
+                    <source src="${video.videoUrl}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <div class="video-content">
                 <div class="video-header">
@@ -127,7 +130,9 @@ function renderVideoPage() {
                         ${relatedVideos.map(relVideo => `
                             <a href="video.html?id=${relVideo.id}" class="video-card" style="text-decoration: none; color: inherit;">
                                 <div class="video-thumbnail">
-                                    <img src="${relVideo.thumbnail}" alt="${relVideo.title}" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <video muted preload="metadata" style="width: 100%; height: 100%; object-fit: cover;">
+                                        <source src="${relVideo.videoUrl}#t=0.5" type="video/mp4">
+                                    </video>
                                     <div class="play-overlay"><i class="fas fa-play"></i></div>
                                     <span class="duration-badge">${relVideo.duration}</span>
                                 </div>

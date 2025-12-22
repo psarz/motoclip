@@ -155,7 +155,8 @@ function renderVideos(filter = 'all') {
     
     videoGrid.innerHTML = '';
     
-    filteredVideos.forEach(video => {
+    // Limit to 10 videos
+    filteredVideos.slice(0, 10).forEach(video => {
         const videoCard = createVideoCard(video);
         videoGrid.appendChild(videoCard);
     });
@@ -340,7 +341,8 @@ function searchVideos(query) {
     );
     
     videoGrid.innerHTML = '';
-    filteredVideos.forEach(video => {
+    // Limit to 10 videos
+    filteredVideos.slice(0, 10).forEach(video => {
         const videoCard = createVideoCard(video);
         videoGrid.appendChild(videoCard);
     });
